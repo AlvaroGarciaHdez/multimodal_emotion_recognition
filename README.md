@@ -173,7 +173,7 @@ Additionally, a dropout layer is used after the embedding layer and a mean pooli
 ### Context Model
 The context classifier model consists of the following layers:
 
-  * **LSTM layer**: This layer is an instance of nn.LSTM and is responsible for processing the input sequence x through a bidirectional LSTM with two layers. The vec_dim parameter represents the dimension of the input and output vectors. The input shape of the layer is (nº utterance/dialogue, vec_dim) and the output shape is (nº utterance/dialogue, vec_dim), where nº utterance/dialogue refers to the number of utterances/dialogues in the batch.
+  * **LSTM layer**: This layer is an instance of nn.LSTM and is responsible for processing the input sequence x through a bidirectional LSTM with two layers. The vec_dim parameter represents the dimension of the input and output vectors. The input shape of the layer is (nº utterance/dialogue, vec_dim) and the output shape is (nº utterance/dialogue, vec_dim), where nº utterance/dialogue refers to the number of utterances there are in the dialogue we send to the model.
 
   * **Dropout layer**: This layer is an instance of nn.Dropout and is applied to the output of the LSTM layer. The dropout parameter is set to 0.3, which means that 30% of the output elements are randomly set to zero during training to prevent overfitting.
 
